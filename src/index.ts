@@ -4,6 +4,9 @@ import { convertResults, resultString } from "./convertResults"
 import { parseCodacyrcFile, readJsonFile } from "./fileUtils"
 import { parseTimeoutSeconds } from "./parseTimeoutSeconds"
 
+console.error(process.env.TIMEOUT)
+process.exit(1)
+
 const timeoutHandle = setTimeout(() => {
   console.error("Timeout occurred. Exiting.")
   process.exit(2)
